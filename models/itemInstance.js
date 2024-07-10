@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const ItemInstanceSchema = new Schema(
   {
     note: { type: String, maxLength: 500 },
-    item: { type: Schema.Types.ObjectId, ref: 'Item' },
+    item: { type: Schema.Types.ObjectId, ref: 'Item', required: true },
     expiryDate: { type: Date, default: null },
   },
   {

@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  h1='Items'
+    for item in items 
+      h2 #{item.name}
+      p #{item.description}
+      ul
+        li Price: #{item.price}$
+        li Items in stock: #{item.numberInStock}
+      ul
+        li Category: #{item.category.name} 
+        li Manufacturer: #{item.manufacturer.name}
+        
